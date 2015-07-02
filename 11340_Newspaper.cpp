@@ -1,3 +1,5 @@
+/* Author: Mohammad Moniruzzaman */
+
 #include <iostream>
 #include <string>
 #include <map>
