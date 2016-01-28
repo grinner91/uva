@@ -53,7 +53,7 @@ class BinaryHeapNew {
             left = i * 2;
             right = (i * 2 ) + 1;
 
-            if(left >= dataCount) break;
+            if(left > dataCount) break;
 
             if(data[left] > data[right] && data[left] > data[i])
             {
@@ -74,8 +74,9 @@ class BinaryHeapNew {
     {
 
         int max = data[1];
-        dataCount--;
         data[1] = data[dataCount];
+        data[dataCount] = -1;
+        dataCount--;
 
         heapifyDown();
 
@@ -94,7 +95,10 @@ class BinaryHeapNew {
     {
 
         BinaryHeapNew bh = new BinaryHeapNew();
-
+//
+//        bh.insert(2);
+//        bh.insert(3);
+//        bh.insert(5);
         for(int i = 0; i < 20; i++)
         {
             int n = (int)(Math.random() * 100);
